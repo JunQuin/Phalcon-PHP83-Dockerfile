@@ -13,8 +13,7 @@ RUN apt-get update && ACCEPT_EULA=Y apt-get install -y \
     libicu-dev \
     libpcre3-dev \
     unixodbc \
-    unixodbc-dev \
-    curl
+    unixodbc-dev
 
 # --- Instalación del Repositorio de Microsoft y Drivers de SQL Server ---
 # Instala wget para descargar el paquete de configuración del repositorio de Microsoft.
