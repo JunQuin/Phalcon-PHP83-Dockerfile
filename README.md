@@ -1,6 +1,6 @@
 # Dockerfile para PHP 8.3 con Phalcon y SQL Server
 
-Este repositorio contiene un `Dockerfile` para construir una imagen de Docker con PHP 8.3, el framework Phalcon, y soporte para SQL Server.
+Este repositorio contiene un `Dockerfile` para construir una imagen de Docker con PHP 8.3, el framework Phalcon, y soporte para SQL Server, PostgreSQL y MySQL.
 
 ## Descripción
 
