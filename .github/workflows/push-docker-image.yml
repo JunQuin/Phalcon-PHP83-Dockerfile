@@ -1,0 +1,17 @@
+name: Build and Push Docker Image to Docker Hub
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Log in to Docker Hub
+        run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build the Docker image (Push to Docker Hub)
+        run: docker build . --file Dockerfile --build-arg USUARIO_VOLUME_NAME=$(whoami) --build-arg USUARIO_VOLUME_UID=$(id -u) --build-arg USUARIO_VOLUME_GID=$(id -g) --tag ${{ secrets.DOCKERHUB_USERNAME }}/php83-phalcon:latest
+      - name: Push the Docker image to Docker Hub
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/php83-phalcon:latest
