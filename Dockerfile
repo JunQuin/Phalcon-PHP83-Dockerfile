@@ -1,4 +1,5 @@
-FROM php:8.3-apache
+# php:8.3-apache
+FROM php@sha256:226e76d17085d0a31d9280299522b8c01e2bf50d56a884823ff03acedf71298e
 
 # --- Actualización e Instalación de Dependencias del Sistema ---
 # Actualiza los repositorios e instala las dependencias necesarias para las extensiones PHP,
