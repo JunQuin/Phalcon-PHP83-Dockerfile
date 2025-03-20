@@ -37,13 +37,13 @@ El `Dockerfile` proporciona un entorno de desarrollo completo para aplicaciones 
     Ejecuta el siguiente comando para iniciar un contenedor basado en la imagen construida:
 
     ```bash
-    docker run -d -p 8082:80 --name php83-phalcon -v /home/junquin/html:/var/www/html php83-phalcon:latest
+    docker run -d -p 8080:80 --name php83-phalcon -v /home/user/html:/var/www/html php83-phalcon:latest
     ```
 
-    Este comando ejecuta el contenedor en modo *detached* (-d), mapea el puerto 8082 del host al puerto 80 del contenedor, le asigna el nombre `php83-phalcon` y monta el directorio `/home/junquin/html` del host en el directorio `/var/www/html` del contenedor. Reemplace `/home/junquin/html` con la ruta a su directorio de trabajo.
+    Este comando ejecuta el contenedor en modo *detached* (-d), mapea el puerto 8080 del host al puerto 80 del contenedor, le asigna el nombre `php83-phalcon` y monta el directorio `/home/user/html` del host en el directorio `/var/www/html` del contenedor. Reemplace `/home/user/html` con la ruta a su directorio de trabajo.
 
 3.  **Acceder a la Aplicación:**
-    Abre tu navegador web y navega a `http://localhost:8082` para acceder a tu aplicación PHP.
+    Abre tu navegador web y navega a `http://localhost:8080` para acceder a tu aplicación PHP.
 
 ## Personalización
 
